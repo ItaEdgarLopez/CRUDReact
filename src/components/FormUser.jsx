@@ -46,7 +46,8 @@ export function FormUser (){
 
     return(
         <>
-            <h2 className="primary">Esto es un formulario</h2>
+            <div className="container">
+            <h2 className="text-primary text-center fw-bold " >Esto es un formulario</h2>
 
             <div className="row">
                 <div className="col">
@@ -57,11 +58,11 @@ export function FormUser (){
                             <li className="list-group-item" key={index}> 
                                 {nombre}
                                 <button 
-                                className="btn btn-primary float-end"
+                                className="btn btn-primary float-end m-1"
                                 onClick={()=> update(nombre)}
                                 >Editar</button>
                                 <button 
-                                className="btn btn-danger float-end"
+                                className="btn btn-danger float-end m-1"
                                 onClick={() =>deleteName(nombre)}
                                 >Eliminar</button>
 
@@ -90,7 +91,7 @@ export function FormUser (){
                     {
                         error !=null ? (
                             
-                            <div className="alert alert-danger"> {error} </div>
+                            <div className="alert alert-danger mt-2"> {error} </div>
                         ):
                             (
                                 <div></div>
@@ -99,6 +100,7 @@ export function FormUser (){
                  
 
                 </div>
+            </div>
             </div>
 
         </>
